@@ -1,7 +1,26 @@
-<header class="flex justify-center items-center">
-    <nav class="flex gap-5">
-        <a href="#about">Sobre mí</a>
-        <a href="#projects">Experiencia</a>
-        <a href="#contact">Contacto</a>
+<header id="header" class="fixed top-0 left-0 w-full flex justify-center items-center z-50 transition-shadow duration-300 py-4">
+    <nav id="nav-container" class="flex px-3 text-sm font-medium rounded-full justify-center items-center">
+        <a href="#about" class="relative block px-2 py-2 transition hover:text-pink-800">
+            <span>Sobre mí </span>
+        </a>
+        <a href="#experience" class="relative block px-2 py-2 transition hover:text-pink-800">
+            <span>Experiencia</span>
+        </a>
+        <a href="#education" class="relative block px-2 py-2 transition hover:text-pink-800">
+            <span>Educación</span>
+        </a>
     </nav>
 </header>
+
+<script>
+    if (typeof window !== "undefined") {
+        document.addEventListener("scroll", () => {
+            const navContainer = document.getElementById("nav-container");
+            if (window.scrollY > 0) {
+                navContainer?.classList.add("bg-navBar-color", "shadow-md");
+            } else {
+                navContainer?.classList.remove("bg-navBar-color", "shadow-md");
+            }
+        });
+    }
+</script>

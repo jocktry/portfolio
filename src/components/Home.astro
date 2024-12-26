@@ -1,16 +1,68 @@
 ---
-import background from '../assets/background.svg';
-import AboutMe from './AboutMe.astro';
-import Education from './Education.astro';
-import Experience from './Experience.astro';
+import background from "../assets/background.svg";
+import AboutMe from "./AboutMe.astro";
+import Education from "./Education.astro";
+import Experience from "./Experience.astro";
 ---
 
 <div id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
-		<AboutMe />
+		<section
+			id="home"
+			class="flex flex-col px-10 md:px-16 lg:px-36 py-4 my-20 justify-center items-center text-center"
+		>
+			<img
+				src="src/assets/photo.jpeg"
+				alt="Photo"
+				class="w-32 h-32 rounded-full mb-5"
+			/>
+			<h2
+				class="text-5xl font-extrabold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text leading-tight"
+			>
+				Daniel Santiago Gaona
+			</h2>
+			<span class="mb-6 text-gray-600">Desarrollador FullStack</span>
+			<p class="text-lg mb-6">
+				Soy un desarrollador web apasionado por crear experiencias
+				digitales únicas y funcionales. Tengo experiencia en diversas
+				tecnologías como HTML, CSS, JavaScript, y frameworks modernos
+				como React y Astro. Me encanta aprender y estar al día con las
+				últimas tendencias en desarrollo web.
+			</p>
+			<div class="flex space-x-4">
+				<a
+					href="mailto:tu-email@example.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="flex items-center space-x-2 bg-button-bg hover:bg-opacity-75 text-gray-600 py-2 px-4 rounded-full border border-gray-400"
+				>
+					<i class="fas fa-envelope text-2xl"></i>
+					<span>Contáctame</span>
+				</a>
+				<a
+					href="https://linkedin.com/in/tu-usuario"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="flex items-center space-x-2 bg-button-bg hover:bg-opacity-75 text-gray-600 py-2 px-4 rounded-full border border-gray-400"
+				>
+					<i class="fab fa-linkedin text-2xl"></i>
+					<span>LinkedIn</span>
+				</a>
+				<a
+					href="https://github.com/tu-usuario"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="flex items-center space-x-2 bg-button-bg hover:bg-opacity-75 text-gray-600 py-2 px-4 rounded-full border border-gray-400"
+				>
+					<i class="fab fa-github text-2xl"></i>
+					<span>GitHub</span>
+				</a>
+			</div>
+		</section>
 		<Experience />
 		<Education />
+		<AboutMe />
 	</main>
 </div>
 
@@ -24,5 +76,4 @@ import Experience from './Experience.astro';
 		z-index: -1;
 		filter: blur(100px);
 	}
-
 </style>
