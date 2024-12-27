@@ -1,5 +1,6 @@
 ---
 import background from "../assets/background.svg";
+import photo from "../assets/photo.jpeg";
 import AboutMe from "./AboutMe.astro";
 import Education from "./Education.astro";
 import Experience from "./Experience.astro";
@@ -14,7 +15,7 @@ import Skills from "./Skills.astro";
 			class="flex flex-col px-10 md:px-16 lg:px-36  mt-20 justify-center items-center text-center"
 		>
 			<img
-				src="/src/assets/photo.jpeg"
+				src={photo.src}
 				alt="Photo"
 				class="w-32 h-32 rounded-full mb-5"
 			/>
